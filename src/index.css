@@ -11,3 +11,164 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.navbar{
+  height: 20vh;
+  width: 100%;
+  background-color: red;
+}
+
+.welcome{
+  height: 60%;
+  width: 100%;
+  font-size: 500%;
+  text-align: center;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.link{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navLink{
+  color: aliceblue;
+  text-align: center;
+  font-size: 4vh;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.board{
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  background-color: rgba(50, 50, 50, 0.4);
+  overflow: hidden;
+}
+
+.pic{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+}
+
+.p1{
+  background-image: url(./static/picture/p1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p2{
+  left: 100%;
+  background-image: url(./static/picture/p2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p3{
+  left: 200%;
+  background-image: url(./static/picture/p3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer{
+  position: absolute;
+  top: 90vh;
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.search{
+  display: flex;
+  width: 20%;
+  height: 10vh;
+  margin: 3vh auto;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: x-large;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: red;
+}
+
+.search_input{
+  width: 80%;
+  height: 5vh;
+  color: red;
+  margin-left: 10%;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.note{
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 2vh;
+}
+
+.search_submit{
+  display: block;
+  margin: 3vh auto;
+  height: 4vh;
+  width: 30%;
+}
+
+.sortHint{
+  display: inline-block;
+  margin-left: 35vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sortBy{
+  width: 6vw;
+  height: 5vh;
+  margin-left: 2.5vw;
+}
+
+#sortOrder{
+  width: 9vw;
+  height: 5vh;
+  margin-left: 2.5vw;
+}
+
+.submitSort{
+  margin-left: 2vw;
+}
+
+.searchRes{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card{
+  display: grid;
+  grid-template-rows: 5fr 1fr;
+  width: 30%;
+  height: 30vh;
+  margin: auto 0;
+}
+
+.cardPic{
+  margin: auto;
+  height: 25vh;
+}
+
+.cardName{
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 5vh;
+}
