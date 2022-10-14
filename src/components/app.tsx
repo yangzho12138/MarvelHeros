@@ -16,7 +16,7 @@ class App extends React.Component{
                         <Route path='/' element={<Home/>}></Route>
                         <Route path='/list' element={<List/>}></Route>
                         <Route path='/gallery' element={<Gallery/>}></Route>
-                        <Route path='/detail' element={<Detail/>}></Route>
+                        <Route path='/detail/:info' element={<Detail/>}></Route>
                     </Routes>
                 </div>
             </React.Fragment>
