@@ -47,7 +47,7 @@ class Detail extends React.Component <any, isState>{
     }
 
     componentDidUpdate(){
-        console.log(this.state.info);
+        // console.log(this.state.info);
         let p = document.querySelector(".profile");
         let imgUrl = this.state.info.thumbnail.path + "/portrait_fantastic." + this.state.info.thumbnail.extension;
         if(p != null){
