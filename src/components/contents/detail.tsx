@@ -1,13 +1,16 @@
 import axios from "axios";
 import md5 from "js-md5";
 import React from "react";
+import { Link } from 'react-router-dom';
 
 interface isState{
     info: any,
 }
 
 class Detail extends React.Component <any, isState>{
-    name: any;
+    preId: string;
+    nextId: string;
+    id: number;
 
     constructor(props: any){
         super(props);
@@ -17,13 +20,35 @@ class Detail extends React.Component <any, isState>{
         }
 
         let url = window.location.href;
-        let id = url.slice(url.lastIndexOf("/") + 1);
-        console.log(id);
+        this.id = Number(url.slice(url.lastIndexOf("/") + 1));
+        // console.log(id);
 
-        this.getInfo(id);
+        this.getInfo(this.id);
+
+        let index = -1;
+        for(let i = 0; i < results.length; i++){
+            // console.log(results[i].id)
+            if(results[i].id === this.id){
+                index = i;
+                break;
+            }
+        }
+        
+        // console.log(results[index - 1]);
+        if(index === 0)
+            this.preId = results[results.length - 1].id;
+        else
+            this.preId = results[index - 1].id;
+        
+        if(index === results.length - 1)
+            this.nextId = results[0].id;
+        else
+            this.nextId = results[index + 1].id;
+
+        // console.log(this.id, this.preId, this.nextId);
     }
 
-    getInfo(id: string){
+    getInfo(id: number){
         let pubkey = "d43633cf8e6f0a66c5df36d617ef73f0";
         let pvtkey = "9a7abac2d407acfb5836ab928825b515f3e87d5b";
         let ts = new Date().getTime();
@@ -61,11 +86,39 @@ class Detail extends React.Component <any, isState>{
         }
     }
 
+    changeInfo(id: number){
+        this.getInfo(id);
+
+        this.id = id;
+        let index = -1;
+        for(let i = 0; i < results.length; i++){
+            if(results[i].id === this.id){
+                index = i;
+                break;
+            }
+        }
+        
+        if(index === 0)
+            this.preId = results[results.length - 1].id;
+        else
+            this.preId = results[index - 1].id;
+        
+        if(index === results.length - 1)
+            this.nextId = results[0].id;
+        else
+            this.nextId = results[index + 1].id;
+        // console.log(this.id, this.preId, this.nextId);
+    }
+
     render(){
         return(
             <div>
                 <div className="profile-title">Hero Profile</div>
                 <div className="profile"></div>
+                <div className="profile-button">
+                    <Link className="profile-left-button" to={`/detail/${this.preId}`} onClick={() => {this.changeInfo(Number(this.preId))}}>Prev</Link>
+                    <Link className="profile-right-button" to={`/detail/${this.nextId}`} onClick={() => {this.changeInfo(Number(this.nextId))}}>Next</Link>
+                </div>
             </div>
         );
     }

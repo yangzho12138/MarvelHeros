@@ -36,6 +36,7 @@ class Gallery extends React.Component  <any, isState>{
         }).then(
             res => {
                 this.setState({results: res.data.data.results});
+                results = res.data.data.results;
             }
         ).catch(
             err => console.log(err)

@@ -7,7 +7,6 @@ interface isState{
     value: string,
     sort: string,
     order: string,
-    count: number,
     results: [],
 }
 
@@ -23,7 +22,6 @@ class List extends React.Component <any, isState>{
             value: " ",
             sort: "Name",
             order: "Ascending",
-            count: 0,
             results:[],
         }
         this.handleChange = this.handleChange.bind(this);
@@ -102,7 +100,7 @@ class List extends React.Component <any, isState>{
                 // console.log(res);
                 // console.log(res.data.data.results);
                 this.setState({results: res.data.data.results});
-                this.setState({count: res.data.data.count});
+                results = res.data.data.results;
             }
         ).catch(
             err => console.log(err)
@@ -125,7 +123,7 @@ class List extends React.Component <any, isState>{
                 // console.log(res);
                 // console.log(res.data.data.results);
                 this.setState({results: res.data.data.results});
-                this.setState({count: res.data.data.count});
+                results = res.data.data.results;
             }
         ).catch(
             err => console.log(err)
