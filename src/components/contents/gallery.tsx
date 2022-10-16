@@ -65,9 +65,9 @@ class Gallery extends React.Component  <any, isState>{
                     <div onClick={() => {this.handleClick("O")}} className="alphabet">O</div>
                     <div onClick={() => {this.handleClick("P")}} className="alphabet">P</div>
                     <div onClick={() => {this.handleClick("Q")}} className="alphabet">Q</div>
-                    <div onClick={() => {this.handleClick("L")}} className="alphabet">R</div>
-                    <div onClick={() => {this.handleClick("M")}} className="alphabet">S</div>
-                    <div onClick={() => {this.handleClick("N")}} className="alphabet">T</div>
+                    <div onClick={() => {this.handleClick("R")}} className="alphabet">R</div>
+                    <div onClick={() => {this.handleClick("S")}} className="alphabet">S</div>
+                    <div onClick={() => {this.handleClick("T")}} className="alphabet">T</div>
                     <div onClick={() => {this.handleClick("U")}} className="alphabet">U</div>
                     <div onClick={() => {this.handleClick("V")}} className="alphabet">V</div>
                     <div onClick={() => {this.handleClick("W")}} className="alphabet">W</div>

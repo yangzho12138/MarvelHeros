@@ -140,7 +140,7 @@ class List extends React.Component <any, isState>{
                         <button className="search_submit" onClick={this.handleClick1}>Precise Search</button>
                         <button className="search_submit" onClick={this.handleClick2}>Fuzzy Search</button>
                     </div>
-                    <div className="note">Note: You can enter the beginning of the hero's name for fuzzy search!</div>
+                    <div className="note">Note: You can enter the beginning of the hero's name for fuzzy search! (e.g. Captain)</div>
                 </div>
                 <br/>
                 <div className="sortHint">Sort By:</div>
